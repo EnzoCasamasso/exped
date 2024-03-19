@@ -6,7 +6,7 @@ import { Separator } from './ui/separator';
 import { Popover, PopoverContent, PopoverTrigger } from './ui/popover';
 import { Button } from './ui/button';
 import { Avatar, AvatarFallback, AvatarImage } from './ui/avatar';
-import { LogOut, MoreHorizontal, Settings } from 'lucide-react';
+import { LogOut, MoonIcon, MoreHorizontal, Settings } from 'lucide-react';
 import { usePathname } from 'next/navigation';
 import { SidebarItems } from '@/types';
 
@@ -43,7 +43,7 @@ export default function SidebarDesktop(props: SidebarDesktopProps) {
                   <div className='flex justify-between items-center w-full'>
                     <div className='flex gap-2'>
                       <Avatar className='h-5 w-5'>
-                        <AvatarImage src='https://github.com/enzo-casamasso.png' />
+                        <AvatarImage src='https://github.com/EnzoCasamasso.png' />
                         <AvatarFallback>Enzo Casamasso</AvatarFallback>
                       </Avatar>
                       <span>Yoozi</span>
@@ -59,6 +59,9 @@ export default function SidebarDesktop(props: SidebarDesktopProps) {
                       Configurações da conta
                     </SidebarButton>
                   </Link>
+                  <SidebarButton size="sm" icon={MoonIcon} className="w-full">
+                    Dark Mode
+                  </SidebarButton>
                   <SidebarButton size='sm' icon={LogOut} className='w-full'>
                     Sair
                   </SidebarButton>
